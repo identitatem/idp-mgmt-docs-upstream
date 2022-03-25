@@ -13,7 +13,7 @@
 [#introduction]
 == Introduction
 
-Identity configuration management for Kubernetes is intended to allow you to quickly and easily configure OAuth authentication across your fleet of OpenShift clusters. Through the creation of an AuthRealm custom resource, you are able to specify one or more identity providers (such as GitHub or LDAP) and a placement rule to indicate to which clusters the identity providers should apply. As more clusters are brought under management, their OAuth configuration will be automatically configured simply by matching the specified placement rule. The existing OAuth configuration will be replaced by the configurations defined in the different AuthRealms. The existing OAuth configuration is saved in the cluster namespace and will be restored once the cluster is no longer under management.
+Identity configuration management for Kubernetes is intended to allow you to quickly and easily configure OAuth authentication across your fleet of OpenShift clusters. Through the creation of an AuthRealm custom resource, you are able to specify one or more identity providers (such as GitHub or LDAP) and a placement rule to indicate to which clusters the identity providers should apply. As more clusters are brought under management, their OAuth configuration will be automatically configured simply by matching the specified placement rule. The existing OAuth configuration will be replaced by the configurations defined in the different AuthRealms. The existing OAuth configuration is saved in the cluster namespace and might be restored once the cluster is no longer under management (For more details read: <<important-note-2,IMPORTANT>>).
 
 An identity configuration management operator configuration is composed of:
 
@@ -51,6 +51,7 @@ Now a placement can be created.  This will be used to determine which managed cl
 The identity configuration management for Kubernetes Technology Preview does not yet utilize custom role definitions for controlling access to work with AuthRealms. Instead, it relies on the role-based access control implemented by multicluster engine and Advanced Cluster Management around ManagedClusterSets, ManagedClusterSetBindings, and Placements. AuthRealms must exist in a namespace containing a Placement, and the Placement leverages the ManagedClusterSets that are bound to that namespace. Access to namespaces with existing bound ManagedClusterSets and/or existing Placements should be managed accordingly.
 ====
 
+[#important-note-2]
 [IMPORTANT]
 ====
 If you are using v0.1.0, before detaching a cluster from the hub, you must make sure the managed cluster is no longer managed by identity configuration management. You can remove the cluster from identity configuration management either by removing the cluster from the ManagedClusterSet, or by removing labels from the managed cluster as appropriate to no longer match the Placement. Once your cluster no longer matches the Placement of any AuthRealm, your original OAuth configuration should be restored on the cluster. If the cluster is detached without first being unmanaged from identity provider management, you will lose access to the cluster.

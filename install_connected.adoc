@@ -39,7 +39,7 @@ Before you install identity configuration management for Kubernetes, see the fol
 
 * You must have one of the following installed:
   - https://stolostron.github.io/mce-docs/[multicluster engine for Kubernetes 2.0.x]
-  - https://www.redhat.com/en/technologies/management/advanced-cluster-management[Red Hat Advanced Cluster Management for Kubernetes 2.4 or 2.5] installed.
+  - https://www.redhat.com/en/technologies/management/advanced-cluster-management[Red Hat Advanced Cluster Management for Kubernetes 2.4.x or 2.5.x] installed.
 
 
 [#confirm-ocp-installation]

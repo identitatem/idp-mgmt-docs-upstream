@@ -2,11 +2,11 @@
 = Requirements and recommendations
 
 Before you install identity configuration management for Kubernetes technology preview, review the following system configuration requirements and settings:
-
 * <<supported-operating-systems-and-platforms,Supported operating systems and platforms>>
 * <<sizing-recommendations,Sizing recommendations>>
 * <<security-requirements,Security requirements>>
 * <<network-configuration,Network configuration>>
+* <<backup-and-restore-recommendation,Backup and restore recommendation>>
 
 *Note:* There is no console for the Technology Preview version of this product.
 
@@ -76,3 +76,10 @@ For the managed cluster networking requirements, see the following table:
 | 443
 
 |===
+
+
+[#backup-and-restore-recommendation]
+== Backup and restore recommendation
+https://www.redhat.com/en/technologies/management/advanced-cluster-management[Red Hat Advanced Cluster Management for Kubernetes 2.5.x]
+added backup and restore capabilities.  However these capabilities are not enabled for identity configuration management for Kubernetes technology preview.
+The recommended approach for backup and restore is using a GitOps based architecture where the identity configuration can be reapplied in the case of a restore scenario.

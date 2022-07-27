@@ -6,7 +6,7 @@ Before you install identity configuration management for Kubernetes technology p
 * <<sizing-recommendations,Sizing recommendations>>
 * <<security-requirements,Security requirements>>
 * <<network-configuration,Network configuration>>
-* <<backup-and-restore,Backup and restore recommendation>>
+* <<backup-and-restore-recommendation,Backup and restore recommendation>>
 
 *Note:* There is no console for the Technology Preview version of this product.
 

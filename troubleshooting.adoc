@@ -92,6 +92,8 @@ Check the status.decision list contains an entry for the managed cluster.  If no
 +
 image::./images/authentication_operator_error.png["authentication operator error message indicates certificate error"]
 +
+The above message means the certificate on the hub is not well set, please refer to xref:./requirements.adoc##openid-server-certificate[Securing OAuth requests to the OpenID Connect identity provider]
+
 [#authentication-operator-log]
 . From the OpenShift Container Platform console UI on the managed cluster, navigate to pods and search "authentication-operator". Check the logs for errors.
 +

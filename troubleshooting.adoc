@@ -310,3 +310,11 @@ If you receive the following error:
 image::./images/openid_invalid_scope_error.png["Error - OpenID invalid scope"]
 
 The OpenID client needs to add default or optional client scopes for profile and email.
+
+=== Invalid redirect URI: openid We Are Sorry... Client not found.
+
+If you receive the following error:
+
+image::./images/openid_client_not_found_error.png["We Are Sorry... Client not found"]
+
+Verify the OpenID ClientID and redirect are correct. This most likely occurs if the setup was copied or created incorrectly and there is a ClientID mismatch between what defined in your AuthRealm clientID: spec and what has been defined in the OpenID itself.

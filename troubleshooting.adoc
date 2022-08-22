@@ -317,4 +317,4 @@ If you receive the following error:
 
 image::./images/openid_client_not_found_error.png["We Are Sorry... Client not found"]
 
-Verify the OpenID ClientID and redirect are correct. This most likely occurs if the setup was copied or created incorrectly and there is a ClientID mismatch between what defined in your AuthRealm clientID: spec and what has been defined in the OpenID itself.
+Verify the OpenID ClientID and redirect are correct. This most likely occurs if the OpenID setup was created incorrectly and there is a ClientID mismatch between what is defined in your AuthRealm `clientID` spec and what has been defined in OpenID itself.
